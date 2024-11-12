@@ -60,4 +60,76 @@ $(document).ready(function(){
             }
         ]
     });
+
+    $('.js-validate').on('submit', function (e) {
+        e.preventDefault();
+        if (validate($(this))) {
+            $(this).find('button[type="submit"]').attr('disabled', 'disabled');
+            $(this)[0].submit();
+        }
+    })
 });
+
+/*-------------------------------validate------------------------------*/
+function validate(form) {
+    var error_class = "has-error";
+    var norma_class = "has-success";
+    var item        = form.find("[required]");
+    var e           = 0;
+    var reg         = undefined;
+
+    function mark(object, expression, errorMessage) {
+        if (expression) {
+            object.parent('div')
+                .addClass(error_class)
+                .removeClass(norma_class)
+                .find('.error-message').text(errorMessage);
+            e++;
+        } else {
+            object.parent('div')
+                .addClass(norma_class)
+                .removeClass(error_class);
+        }
+    }
+
+    form.find("[required]").each(function () {
+        var $input = $(this);
+        var inputValue = $.trim($input.val());
+        var errorMessage = "";
+
+        switch ($input.attr("data-validate")) {
+            case undefined:
+                mark($input, inputValue.length === 0, $input.attr("data-required-error") || "This field is required.");
+                break;
+            case "email":
+                reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                errorMessage = $input.attr("data-error") || "Please enter a valid email address.";
+                mark($input, !reg.test(inputValue), errorMessage);
+                break;
+            case "phone":
+                reg = /^[0-9\s\-\+\(\)]{10,20}$/;
+                errorMessage = $input.attr("data-error") || "Please enter a valid phone number.";
+                mark($input, !reg.test(inputValue), errorMessage);
+                break;
+            case "age":
+                reg = /^[0-9]{2}$/;
+                errorMessage = $input.attr("data-error") || "Please enter a valid age.";
+                mark($input, !reg.test(inputValue), errorMessage);
+                break;
+            default:
+                reg = new RegExp($input.attr("data-validate"), "g");
+                errorMessage = $input.attr("data-error") || "Invalid data entered.";
+                mark($input, !reg.test(inputValue), errorMessage);
+                break;
+        }
+    })
+
+    if (e === 0) {
+        return true;
+    } else {
+        form.find("." + error_class + " input:first").focus();
+        return false;
+    }
+}
+
+/*-------------------------------validate------------------------------*/

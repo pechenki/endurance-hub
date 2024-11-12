@@ -347,50 +347,86 @@
                 <!-- Flex container for two equal columns -->
                 <div class="row g-0 d-flex">
                     <!-- Left Column: Image -->
-                    <div class="col-12 col-md-7 d-flex align-items-center contact-us-image">
+                    <div class="col-12 col-md-6 col-xl-7 d-none d-md-flex align-items-center contact-us-image">
                         <img src="images/hero-image.jpg" alt="#">
                     </div>
 
                     <!-- Right Column: Form -->
-                    <div class="col-12 col-md-5 d-flex align-items-center contact-us-form shadow">
-                        <form class="w-100">
+                    <div class="col-12 col-md-6 col-xl-5 d-flex align-items-center contact-us-form shadow">
+                        <form class="w-100 js-validate" data-toggle="validator" novalidate="true">
                             <h2 class="section__title">Стати частиною команди</h2>
                             <p>Please fill in the form below, and we will get back to you shortly.</p>
 
                             <!-- Two Columns for Inputs (Left: Name, Email / Right: Phone, City) -->
-                            <div class="row mb-3">
+                            <div class="row mb-1">
                                 <!-- Left Column: Name and Email -->
                                 <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                    <div class="mb-1">
+                                        <label for="name" class="form-label">Ім'я</label>
+                                        <input
+                                                type="text"
+                                                class="form-control"
+                                                id="name"
+                                                placeholder="Введіть своє ім'я"
+                                                required
+                                                data-required-error="Поле не заповнене"
+                                        >
+                                        <div class="error-message"></div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                    <div class="mb-1">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                placeholder="Введіть свій email"
+                                                required
+                                                data-validate="email"
+                                                data-error="Введить коректне значення"
+                                                data-required-error="Поле не заповнене"
+                                        >
+                                        <div class="error-message"></div>
                                     </div>
                                 </div>
                                 <!-- Right Column: Phone and City -->
                                 <div class="col-12 col-md-6">
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Phone</label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                                    <div class="mb-1">
+                                        <label for="phone" class="form-label">Телефон</label>
+                                        <input
+                                                type="tel"
+                                                class="form-control"
+                                                id="phone"
+                                                placeholder="Введіть свій телефон"
+                                                required
+                                                data-validate="phone"
+                                                data-error="Введить коректне значення"
+                                                data-required-error="Поле не заповнене"
+                                        >
+                                        <div class="error-message"></div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="city" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                                    <div class="mb-1">
+                                        <label for="city" class="form-label">Місто</label>
+                                        <input
+                                                type="text"
+                                                class="form-control"
+                                                id="city"
+                                                placeholder="Введіть місто"
+                                                required
+                                                data-required-error="Поле не заповнене"
+                                        >
+                                        <div class="error-message"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Message Textarea -->
                             <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                                <label for="message" class="form-label">Повідомлення</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder=""></textarea>
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary js-submit">Відправити</button>
                         </form>
                     </div>
                 </div>

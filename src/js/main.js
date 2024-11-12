@@ -1,3 +1,9 @@
+$(window).on('load', function () {
+    setTimeout(function() {
+        $('#preloader').addClass('hidden');
+    }, 1000); // 1 second delay
+});
+
 $(document).ready(function(){
     $('.js-choice-slider').slick({
         centerMode: true,

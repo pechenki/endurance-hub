@@ -53,12 +53,12 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/images'),  // from src/images folder
-                    to: path.resolve(__dirname, 'dist/images'),    // to dist/images folder
+                    from: path.resolve(__dirname, 'src/images'),
+                    to: path.resolve(__dirname, 'dist/images'),
                 },
                 {
-                    from: path.resolve(__dirname, 'src/fonts'),  // from src/images folder
-                    to: path.resolve(__dirname, 'dist/fonts'),    // to dist/images folder
+                    from: path.resolve(__dirname, 'src/fonts'),
+                    to: path.resolve(__dirname, 'dist/fonts'),
                 },
             ],
         }),

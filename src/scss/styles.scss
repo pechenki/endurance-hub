@@ -4,7 +4,6 @@
 $blue: rgb(92, 208, 255);
 $purple: rgb(180, 92, 254);
 
-// merge with existing $theme-colors map
 $theme-colors: (
         primary: $blue
 );
@@ -38,8 +37,29 @@ a {
   color: $blue;
 }
 
+.btn-primary {
+  color: $light;
+}
+
 .accordion-button:not(.collapsed) {
   background: linear-gradient(to right, rgb(180, 92, 254), rgb(92, 208, 255));
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+  &.hidden {
+    display: none;
+  }
 }
 
 .main__logo {

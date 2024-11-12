@@ -54,8 +54,12 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  min-height: calc(100vh - 96px);
   position: relative;
+  min-height: calc(100vh - 120px);
+
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 96px);
+  }
 
   &:before {
     content: '';
@@ -75,9 +79,14 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 50%;
+  width: 100%;
+  padding: 16px;
   text-align: center;
   color: $light;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
 }
 
 .services-section {

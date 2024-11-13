@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         clean: true, // Clean dist folder before every build
-        // assetModuleFilename: "assets/[name][ext][query]", // Path for images and other assets
+        // assetModuleFilename: "assets/[name][ext][query]", // Path for assets and other assets
     },
 
     module: {
@@ -33,10 +33,10 @@ module.exports = {
             },
             // Image Loader (for dynamic image processing)
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|mp4)$/i,
                 type: 'asset/resource', // Use Webpack's asset module
                 generator: {
-                    filename: 'images/[name].[hash:8][ext]', // Path and name for output images
+                    filename: 'assets/[name].[hash:8][ext]', // Path and name for output assets
                 },
             },
             {
@@ -53,8 +53,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/images'),
-                    to: path.resolve(__dirname, 'dist/images'),
+                    from: path.resolve(__dirname, 'src/assets'),
+                    to: path.resolve(__dirname, 'dist/assets'),
                 },
                 {
                     from: path.resolve(__dirname, 'src/fonts'),
@@ -79,10 +79,10 @@ module.exports = {
         open: true,
         hot: true, // Enable Hot Module Replacement (HMR)
         watchFiles: {
-            paths: ["src/images/**/*", "src/scss/**/*", "src/**/*.html"], // Watch changes to images
+            paths: ["src/assets/**/*", "src/scss/**/*", "src/**/*.html"], // Watch changes to assets
         },
         devMiddleware: {
-            writeToDisk: true, // Force images and other assets to be written to disk
+            writeToDisk: true, // Force assets and other assets to be written to disk
         },
     },
 

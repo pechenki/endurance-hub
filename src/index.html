@@ -13,7 +13,7 @@
             <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
                 <h1 class="mb-3 mb-md-0 main__logo">
                     <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                        <img src="images/endurance_hub_logo.png" alt="Endurance Hub"/>
+                        <img src="assets/endurance_hub_logo.png" alt="Endurance Hub"/>
                     </a>
                 </h1>
                 <div class="d-flex justify-content-between align-items-center">
@@ -29,21 +29,31 @@
                             </svg>
                         </a>
                     </div>
-                    <button type="button" class="btn btn-outline-primary me-3">Детальніше</button>
-                    <button type="button" class="btn btn-primary">Записатись</button>
+                    <button type="button" class="btn btn-outline-primary me-3" data-bs-toggle="modal" data-bs-target="#detailsModal">Детальніше</button>
+                    <a href="#calendar" class="btn btn-primary">Записатись</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <!--HERO SECTION START-->
-        <section class="hero-section" style="background-image: url(images/hero-image.jpg)">
+        <section class="hero-section">
+            <video
+                    src="assets/hero-video.mp4"
+                    autoplay
+                    muted
+                    loop
+                    poster="assets/hero-poster.jpg"
+                    class="hero-video"
+                    width="1920"
+                    height="1080"
+            ></video>
             <div class="hero-section__content">
                 <h2 class="section__title">Функціональне тестування пульсових зон для бігу</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <div class="section__buttons">
-                    <button type="button" class="btn btn-primary">Записатись</button>
-                    <button type="button" class="btn btn-outline-light me-3">Детальніше</button>
+                    <a href="#calendar" class="btn btn-primary">Записатись</a>
+                    <button type="button" class="btn btn-outline-light me-3" data-bs-toggle="modal" data-bs-target="#detailsModal">Детальніше</button>
                 </div>
             </div>
         </section>
@@ -110,7 +120,7 @@
         </section>
         <!--SERVICES SECTION END-->
         <!--CALENDAR SECTION START-->
-        <section class="calendar-section">
+        <section class="calendar-section" id="calendar">
             <div class="container py-5">
                 <h2 class="text-center mb-5 section__title">Записатись</h2>
             </div>
@@ -165,12 +175,12 @@
             </div>
             <div class="pros-image-container container-fluid">
                 <div class="row row-cols-1 row-cols-sm-2 g-0">
-                    <div class="col"><img src="images/pros1.jpg" alt="#" /></div>
-                    <div class="col"><img src="images/pros2.jpg" alt="#" /></div>
+                    <div class="col"><img src="assets/pros1.jpg" alt="#" /></div>
+                    <div class="col"><img src="assets/pros2.jpg" alt="#" /></div>
                 </div>
                 <div class="d-flex justify-content-center align-items-center py-5">
-                    <button type="button" class="btn btn-primary me-3">Записатись</button>
-                    <button type="button" class="btn btn-outline-secondary">Детальніше</button>
+                    <a href="#calendar" class="btn btn-primary me-3">Записатись</a>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#detailsModal">Детальніше</button>
                 </div>
             </div>
         </section>
@@ -181,7 +191,7 @@
             <div class="choice__slider js-choice-slider">
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run1.jpg" alt="#" />
+                    <img src="assets/run1.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 1</h4>
                         <p>Professional Triathlete</p>
@@ -190,7 +200,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run2.jpg" alt="#" />
+                    <img src="assets/run2.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 2</h4>
                         <p>Professional Triathlete</p>
@@ -199,7 +209,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run3.jpg" alt="#" />
+                    <img src="assets/run3.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 3</h4>
                         <p>Professional Triathlete</p>
@@ -208,7 +218,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run4.jpg" alt="#" />
+                    <img src="assets/run4.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 4</h4>
                         <p>Professional Triathlete</p>
@@ -217,7 +227,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run5.jpg" alt="#" />
+                    <img src="assets/run5.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 5</h4>
                         <p>Professional Triathlete</p>
@@ -295,7 +305,7 @@
             <div class="choice__slider js-team-slider">
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run1.jpg" alt="#" />
+                    <img src="assets/run1.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 1</h4>
                         <p>Professional Triathlete</p>
@@ -304,7 +314,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run2.jpg" alt="#" />
+                    <img src="assets/run2.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 2</h4>
                         <p>Professional Triathlete</p>
@@ -313,7 +323,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run3.jpg" alt="#" />
+                    <img src="assets/run3.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 3</h4>
                         <p>Professional Triathlete</p>
@@ -322,7 +332,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run4.jpg" alt="#" />
+                    <img src="assets/run4.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 4</h4>
                         <p>Professional Triathlete</p>
@@ -331,7 +341,7 @@
                 <!--CHOICE SLIDER ITEM END-->
                 <!--CHOICE SLIDER ITEM START-->
                 <div class="choice__slider-item">
-                    <img src="images/run5.jpg" alt="#" />
+                    <img src="assets/run5.jpg" alt="#" />
                     <div class="choice__slider-caption">
                         <h4>Runner 5</h4>
                         <p>Professional Triathlete</p>
@@ -348,7 +358,7 @@
                 <div class="row g-0 d-flex">
                     <!-- Left Column: Image -->
                     <div class="col-12 col-md-6 col-xl-7 d-none d-md-flex align-items-center contact-us-image">
-                        <img src="images/hero-image.jpg" alt="#">
+                        <img src="assets/hero-image.jpg" alt="#">
                     </div>
 
                     <!-- Right Column: Form -->
@@ -426,7 +436,7 @@
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary js-submit">Відправити</button>
+                            <button type="submit" class="btn btn-primary">Відправити</button>
                         </form>
                     </div>
                 </div>
@@ -485,13 +495,13 @@
     </main>
     <footer>
         <div class="footer-image-wrapper">
-            <img src="images/pros1.jpg" alt="#">
+            <img src="assets/pros1.jpg" alt="#">
         </div>
         <div class="footer-bottom-wrapper py-3">
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="main__logo">
                     <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                        <img src="images/endurance_hub_logo.png" alt="Endurance Hub"/>
+                        <img src="assets/endurance_hub_logo.png" alt="Endurance Hub"/>
                     </a>
                 </div>
                 <div class="d-flex justify-content-between align-items-center me-3">
@@ -512,6 +522,62 @@
     <div class="preloader" id="preloader">
         <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p>Please fill out the form below to get in touch with us:</p>
+                    <form class="js-validate" data-toggle="validator" novalidate="true">
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label for="contact-name" class="form-label">Ім'я</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="contact-name"
+                                    placeholder="Введіть своє ім'я"
+                                    required
+                                    data-required-error="Поле не заповнене"
+                            >
+                            <div class="error-message"></div>
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="mb-3">
+                            <label for="contact-phone" class="form-label">Телефон</label>
+                            <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="contact-phone"
+                                    placeholder="Введіть свій телефон"
+                                    required
+                                    data-error="Введить коректне значення"
+                                    data-required-error="Поле не заповнене"
+                            >
+                            <div class="error-message"></div>
+                        </div>
+                        <!-- Message Field -->
+                        <div class="mb-3">
+                            <label for="contact-message" class="form-label">Повідомлення</label>
+                            <textarea class="form-control" id="contact-message" rows="3" placeholder="Введіть повідомлення"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    <button type="submit" class="btn btn-primary">Відправити</button>
+                </div>
+            </div>
         </div>
     </div>
     <script  type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>

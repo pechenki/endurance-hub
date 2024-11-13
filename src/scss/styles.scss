@@ -125,6 +125,12 @@ a {
   .card-title {
     font-family: 'kharkivregular', sans-serif;
   }
+
+  .card-link {
+    padding-left: 0;
+    padding-right: 0;
+    color: $blue;
+  }
 }
 
 .pros-icon {

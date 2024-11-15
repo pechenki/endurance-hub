@@ -12,7 +12,6 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         clean: true, // Clean dist folder before every build
-        // assetModuleFilename: "assets/[name][ext][query]", // Path for assets and other assets
     },
 
     module: {
@@ -61,27 +60,30 @@ module.exports = {
                     to: path.resolve(__dirname, 'dist/fonts'),
                 },
                 {
-                    from: path.resolve(__dirname, 'src/js/jquery-3.7.1.min.js'),
-                    to: path.resolve(__dirname, 'dist/js/jquery.min.js'),
+                    from: path.resolve(__dirname, "src/js/jquery-3.7.1.min.js"),
+                    to: path.resolve(__dirname, "dist/js/jquery.min.js"),
                 },
                 {
-                    from: path.resolve(__dirname, 'src/js/bootstrap.bundle.min.js'),
-                    to: path.resolve(__dirname, 'dist/js/bootstrap.bundle.min.js'),
+                    from: path.resolve(__dirname, "src/js/bootstrap.bundle.min.js"),
+                    to: path.resolve(__dirname, "dist/js/bootstrap.bundle.min.js"),
                 },
                 {
-                    from: path.resolve(__dirname, 'src/js/slick.min.js'),
-                    to: path.resolve(__dirname, 'dist/js/slick.min.js'),
+                    from: path.resolve(__dirname, "src/js/slick.min.js"),
+                    to: path.resolve(__dirname, "dist/js/slick.min.js"),
                 },
             ],
         }),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             filename: "index.html",
-            inject: true,
+            inject: "body", // Inject scripts at the end of the <body>
+            scriptLoading: "defer", // Ensure scripts load with "defer"
         }),
         !isDevelopment && new MiniCssExtractPlugin({ filename: "styles.css" }),
     ].filter(Boolean),
-
+    externals: {
+        jquery: "jQuery", // Exclude jQuery from bundling
+    },
     devServer: {
         static: {
             directory: path.join(__dirname, "dist"),

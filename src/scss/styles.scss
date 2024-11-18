@@ -133,6 +133,25 @@ a {
   }
 }
 
+.calendar-tabs {
+  .nav-tabs {
+    border-color: rgb(120, 183, 254);
+  }
+  .nav-item {
+    font-family: 'kharkivregular', sans-serif;
+    font-size: 22px;
+  }
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    border-color: rgb(120, 183, 254);
+    background-color: rgb(120, 183, 254);
+  }
+  .calendly-inline-widget {
+    background: linear-gradient(to bottom, rgb(120, 183, 254), rgb(145, 130, 249));
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
 .pros-icon {
   width: 4rem;
   height: 4rem;

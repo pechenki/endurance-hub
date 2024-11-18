@@ -151,6 +151,50 @@
         <section class="calendar-section" id="calendar">
             <div class="container py-5">
                 <h2 class="text-center mb-5 section__title">Записатись</h2>
+                <div class="calendar-tabs">
+                    <ul class="nav nav-tabs nav-fill" id="calendarTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button
+                                    class="nav-link active"
+                                    id="lviv-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#lviv"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="lviv"
+                                    aria-selected="true"
+                            >
+                                Львів
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                    class="nav-link"
+                                    id="kyiv-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#kyiv"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="kyiv"
+                                    aria-selected="false"
+                            >
+                                Київ
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="calendarTabContent">
+                        <div class="tab-pane fade show active" id="lviv" role="tabpanel" aria-labelledby="lviv-tab">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/endurancehub-ua/clone?primary_color=5cd0ff" style="min-width:320px;height:700px;"></div>
+                            <!-- Calendly inline widget end -->
+                        </div>
+                        <div class="tab-pane fade" id="kyiv" role="tabpanel" aria-labelledby="kyiv-tab">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/endurancehub-ua/vo2mastertest?primary_color=5cd0ff" style="min-width:320px;height:700px;"></div>
+                            <!-- Calendly inline widget end -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--CALENDAR SECTION END-->
@@ -776,6 +820,7 @@
     <script  type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

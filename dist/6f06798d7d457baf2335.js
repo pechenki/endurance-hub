@@ -5,7 +5,7 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function(){
-    $('.js-choice-slider').slick({
+    $('.js-choice-slider').not('.slick-initialized').slick({
         centerMode: true,
         centerPadding: '60px',
         infinite: true,
@@ -35,7 +35,7 @@ $(document).ready(function(){
         ]
     });
 
-    $('.js-team-slider').slick({
+    $('.js-team-slider').not('.slick-initialized').slick({
         centerMode: true,
         centerPadding: '60px',
         infinite: true,

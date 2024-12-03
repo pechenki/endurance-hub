@@ -66,6 +66,7 @@ $(document).ready(function(){
     });
 
     $('.js-validate').on('submit', function (e) {
+        console.log('SUBMIT')
         e.preventDefault();
         if (validate($(this))) {
             $(this).find('button[type="submit"]').attr('disabled', 'disabled');

@@ -37,8 +37,14 @@ a {
   color: $blue;
 }
 
-.btn-primary {
-  color: $light;
+.btn {
+  &:hover, &:focus {
+    color: $light;
+  }
+
+  &-primary {
+    color: $light;
+  }
 }
 
 .accordion-button:not(.collapsed) {
@@ -62,12 +68,28 @@ a {
   }
 }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $light;
+  z-index: 100;
+}
+
 .main__logo {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .section__title {
   font-family: 'kharkivregular', sans-serif;
+  &--light {
+    color: $light;
+  }
+}
+
+.main {
+  padding-top: 93px;
 }
 
 .hero-section {
@@ -116,6 +138,10 @@ a {
   }
 }
 
+.hero-section__text {
+  font-size: 20px;
+}
+
 .services-section {
   .card {
     border: 0;
@@ -130,10 +156,18 @@ a {
     padding-left: 0;
     padding-right: 0;
     color: $blue;
+    &:hover, &:focus {
+      color: rgb(180, 92, 254);
+    }
   }
 }
 
+.calendar-section {
+  background: linear-gradient(to bottom, rgb(120, 183, 254), rgb(145, 130, 249));
+}
+
 .calendar-tabs {
+
   .nav-tabs {
     border-color: rgb(120, 183, 254);
   }
@@ -141,14 +175,40 @@ a {
     font-family: 'kharkivregular', sans-serif;
     font-size: 22px;
   }
-  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    border-color: rgb(120, 183, 254);
-    background-color: rgb(120, 183, 254);
+
+  .nav-tabs {
+    border-color: transparent;
+    .nav-link {
+      &:hover, &:focus {
+        border-color: transparent;
+      }
+      &.active {
+        border: 0;
+        border-bottom: 3px solid $light;
+        background-color: transparent;
+        color: $light;
+      }
+    }
+  }
+  .nav-tabs .nav-item.show .nav-link {
+    border: 0;
+    border-bottom: 3px solid #0d6efd;
+    background-color: transparent;
+    //background-color: rgb(120, 183, 254);
   }
   .calendly-inline-widget {
-    background: linear-gradient(to bottom, rgb(120, 183, 254), rgb(145, 130, 249));
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+
+    iframe {
+      width: 100%;
+
+      [data-container="booking-container"] {
+        max-width: 100% !important;
+        width: 100%!important;
+      }
+    }
+
   }
 }
 
@@ -214,7 +274,7 @@ a {
   height: 60px;
   padding: 0;
   border-radius: 50%;
-  border: 1px solid $primary;
+  border: 1px solid $blue;
   z-index: 10;
   &--prev {
     left: 15px;
@@ -225,21 +285,33 @@ a {
   }
 
   svg {
-    fill: $primary;
+    fill: $blue;
+  }
+  &:hover {
+    border-color: $purple;
+    svg {
+      fill: $purple;
+    }
   }
 }
 
-.packages-table-wrapper {
-  padding: 20px 20px 40px;
-  background: linear-gradient(to bottom, rgb(120, 183, 254), rgb(145, 130, 249));
+.packages-section {
+  background: linear-gradient(to bottom, rgb(92, 208, 255), rgb(180, 92, 254));
 }
 
 .packages-table {
   border: 0;
-  background: linear-gradient(to bottom, rgb(92, 208, 255), rgb(180, 92, 254));
   border-collapse: collapse;
   width: 100%;
   text-align: center;
+  tbody {
+    tr {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+      }
+    }
+  }
   th, td {
     border: 0;
     padding: 10px 15px;
@@ -341,6 +413,12 @@ a {
   .accordion-button:not(.collapsed)::after {
     content: '\2212';
   }
+  .accordion-button {
+    font-size: 1.25rem;
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }
 
 .contact-us-image {
@@ -419,4 +497,18 @@ a {
   .error-message {
     opacity: 1;
   }
+}
+
+#detailsModal {
+  .modal-dialog {
+    max-width: 700px;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
 }

@@ -72,7 +72,23 @@ $(document).ready(function(){
             $(this).find('button[type="submit"]').attr('disabled', 'disabled');
             $(this)[0].submit();
         }
-    })
+    });
+
+    $('#lviv-link').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#calendar').offset().top
+        }, 'fast');
+        $('#lviv-tab').trigger('click'); // Open the Lviv tab
+    });
+
+    $('#kyiv-link').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#calendar').offset().top
+        }, 'fast');
+        $('#kyiv-tab').trigger('click'); // Open the Kyiv tab
+    });
 });
 
 /*-------------------------------validate------------------------------*/

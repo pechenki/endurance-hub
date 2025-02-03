@@ -409,6 +409,19 @@ a {
   }
 }
 
+.partners-slider {
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.partners-slider__item {
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+}
+
 .faq-section {
   .accordion-button::after {
     content: '\002B';

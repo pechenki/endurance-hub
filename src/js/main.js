@@ -5,6 +5,10 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function(){
+    $('.js-select').select2({
+        minimumResultsForSearch: -1,
+    });
+
     $('.js-choice-slider').not('.slick-initialized').slick({
         centerMode: true,
         centerPadding: '60px',

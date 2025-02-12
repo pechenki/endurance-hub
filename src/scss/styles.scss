@@ -486,7 +486,6 @@ a {
 
 .contact-us-form {
   background: $light;
-
   padding: 30px;
 
 
@@ -495,9 +494,30 @@ a {
     border-radius: 6px;
   }
 
+  .select2-container--default .select2-selection--single {
+    border: 1px solid rgb(222, 226, 230);
+    height: 38px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 38px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px;
+    right: 5px;
+  }
+
   textarea {
      resize: none;
   }
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: rgba(120, 183, 254, 0.5);
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: linear-gradient(to right, rgb(120, 183, 254), rgb(145, 130, 249));
 }
 
 .contact__item  {

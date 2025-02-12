@@ -25,7 +25,13 @@ $(document).ready(function(){
             '</button>',
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 769,
                 settings: {
                     centerMode: true,
                     centerPadding: '40px',
@@ -55,7 +61,13 @@ $(document).ready(function(){
             '</button>',
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 769,
                 settings: {
                     centerMode: true,
                     centerPadding: '40px',
@@ -83,10 +95,15 @@ $(document).ready(function(){
             '</button>',
         responsive: [
             {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
                 breakpoint: 480,
                 settings: {
                     centerMode: true,
-                    centerPadding: '40px',
                     slidesToShow: 1
                 }
             }

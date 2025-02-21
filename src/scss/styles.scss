@@ -5,7 +5,7 @@ $blue: rgb(92, 208, 255);
 $purple: rgb(180, 92, 254);
 
 $theme-colors: (
-        primary: $blue
+  primary: $blue
 );
 
 @import "bootstrap";
@@ -159,6 +159,13 @@ a {
     border-radius: 0;
   }
 
+  .card-img {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 10%;
+  }
+
   .card-title {
     font-family: 'kharkivregular', sans-serif;
   }
@@ -228,10 +235,20 @@ a {
   }
 }
 
+.pros {
+  text-align: center;
+}
+
+.pros__title {
+  text-align: center;
+}
+
 .pros-icon {
   width: 4rem;
   height: 4rem;
-  border-radius: .75rem;
+  background: linear-gradient(to bottom, rgb(92, 208, 255), rgb(180, 92, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .pros-image-container {

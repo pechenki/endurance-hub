@@ -731,7 +731,7 @@ eval("module.exports = __webpack_require__.p + \"fonts/kharkiv_tone.14b13eca.wof
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("68f0372eb82a2e42f5ee")
+/******/ 		__webpack_require__.h = () => ("6959931ba62f18b51a62")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

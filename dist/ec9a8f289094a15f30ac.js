@@ -38,7 +38,15 @@ $(document).ready(function(){
                 breakpoint: 769,
                 settings: {
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '150px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    centerMode: true,
+                    centerPadding: '50px',
                     slidesToShow: 1
                 }
             }
@@ -74,7 +82,15 @@ $(document).ready(function(){
                 breakpoint: 769,
                 settings: {
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '150px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    centerMode: true,
+                    centerPadding: '50px',
                     slidesToShow: 1
                 }
             }

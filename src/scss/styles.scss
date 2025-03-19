@@ -59,7 +59,10 @@ a {
 }
 
 .contacts {
-  font-size: 22px;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+
 }
 
 .preloader {
@@ -92,6 +95,14 @@ a {
   max-width: 180px;
 }
 
+.header__buttons {
+  @media (max-width: 400px) {
+    .btn {
+      font-size: 14px;
+    }
+  }
+}
+
 .section__title {
   font-family: 'kharkivregular', sans-serif;
   &--light {
@@ -100,7 +111,13 @@ a {
 }
 
 .main {
-  padding-top: 93px;
+  padding-top: 112px;
+  @media (min-width: 400px) {
+    padding-top: 120px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 93px;
+  }
 }
 
 .hero-section {
@@ -111,7 +128,7 @@ a {
   height: calc(100vh - 120px);
 
   @media (min-width: 768px) {
-    height: calc(100vh - 99px);
+    height: calc(100vh - 93px);
   }
 
   &:before {
@@ -144,7 +161,7 @@ a {
   text-align: center;
   color: $light;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     max-width: 50%;
   }
 }
@@ -160,9 +177,18 @@ a {
   }
 
   .card-img {
-    height: 400px;
+    height: 225px;
     position: relative;
     overflow: hidden;
+
+    @media (min-width: 1024px) {
+      height: 300px;
+    }
+
+    @media (min-width: 1366px) {
+      height: 400px;
+    }
+
     img {
       position: absolute;
       left: 0;
@@ -239,6 +265,15 @@ a {
   }
 }
 
+.pros-section {
+  .row {
+    @media (min-width: 1366px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
 .pros {
   text-align: center;
 }
@@ -273,7 +308,15 @@ a {
   margin: 0 15px;
   border-radius: 6px;
   overflow: hidden;
-  max-height: 500px;
+  max-height: 315px;
+
+  @media (min-width: 430px) {
+    max-height: 400px;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 500px;
+  }
 
   &:before {
     content: '';
@@ -284,12 +327,6 @@ a {
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   }
-  //&:hover {
-  //  cursor: pointer;
-  //  .choice__slider-caption {
-  //    height: 50%;
-  //  }
-  //}
 
   img {
     width: 100%;
@@ -306,8 +343,29 @@ a {
   padding: 15px;
   color: $light;
   z-index: 2;
-  //height: 95px;
-  //transition: height 0.3s ease;
+  font-size: 13px;
+
+  @media (min-width: 430px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: calc(1rem + 0.3vw);
+
+    @media (min-width: 768px) {
+      font-size: calc(1.275rem + 0.3vw);
+    }
+  }
+
+  p {
+    margin-bottom: 5px;
+    @media (min-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .choice-slider-arrow {
@@ -315,12 +373,18 @@ a {
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   padding: 0;
   border-radius: 50%;
   border: 1px solid $blue;
   z-index: 10;
+
+  @media (min-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
+
   &--prev {
     left: 15px;
   }
@@ -484,6 +548,13 @@ a {
     &:focus {
       box-shadow: none;
     }
+  }
+}
+
+.contact-us-section {
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 

@@ -20,7 +20,7 @@
                     <img src="assets/endurance_hub_logo.e76166a6.png" alt="Endurance Hub"/>
                 </a>
             </h1>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="header__buttons d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-between align-items-center me-3">
                     <a href="https://www.instagram.com/endurance_hub.ua/" target="_blank" rel="noopener" class="me-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
@@ -243,7 +243,7 @@
     <section class="pros-section">
         <div class="container py-5">
             <h2 class="text-center mb-5 section__title">Переваги тестування в Endurance Hub</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
                 <!--PROS COLUMN START-->
                 <div class="pros col">
                     <div class="d-flex align-items-center justify-content-center mb-3">
@@ -379,7 +379,9 @@
     <!--PROS SECTION END-->
     <!--CHOICE SECTION START-->
     <section class="choice-section">
-        <h2 class="text-center mb-5 section__title">Нас обирають найкращі</h2>
+        <div class="container">
+            <h2 class="text-center mb-5 section__title">Нас обирають найкращі</h2>
+        </div>
         <div class="choice__slider js-choice-slider">
             <!--CHOICE SLIDER ITEM START-->
             <div class="choice__slider-item">
@@ -505,28 +507,28 @@
         <div class="container py-5">
             <h2 class="text-center mb-5 section__title">Пакети</h2>
             <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack1.fa6d0df8.jpg" class="img-fluid rounded" alt="Image 1">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack2.a1d43ff7.jpg" class="img-fluid rounded" alt="Image 2">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack3.a7063705.jpg" class="img-fluid rounded" alt="Image 3">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack4.c3d46935.jpg" class="img-fluid rounded" alt="Image 4">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack5.6175db20.jpg" class="img-fluid rounded" alt="Image 5">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack6.f32db03b.jpg" class="img-fluid rounded" alt="Image 6">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack7.f1c6ddf4.jpg" class="img-fluid rounded" alt="Image 7">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-xs-12">
                     <img src="assets/pack8.f1c6e925.jpg" class="img-fluid rounded" alt="Image 8">
                 </div>
             </div>
@@ -1027,17 +1029,17 @@
     </section>
     <!--TEAM SECTION END-->
     <!--CONTACTUS SECTION START-->
-    <section class="contact-us-section py-5">
+    <section class="contact-us-section">
         <div class="container">
             <!-- Flex container for two equal columns -->
             <div class="row g-0 d-flex">
                 <!-- Left Column: Image -->
-                <div class="col-12 col-md-6 col-xl-7 d-none d-md-flex align-items-center contact-us-image">
+                <div class="col-xs-12 col-lg-7 d-none d-md-flex align-items-center contact-us-image">
                     <img src="assets/hero-image.d74070b2.jpg" alt="#">
                 </div>
 
                 <!-- Right Column: Form -->
-                <div class="col-12 col-md-6 col-xl-5 d-flex align-items-center contact-us-form shadow">
+                <div class="col-xs-12 col-lg-5 d-flex align-items-center contact-us-form shadow">
                     <form class="w-100 js-validate" data-toggle="validator" novalidate="true">
                         <h2 class="section__title">Стати частиною команди</h2>
                         <div class="row mb-1">
@@ -1065,7 +1067,7 @@
                                             id="phone"
                                             required
                                             data-validate="phone"
-                                            data-error="Введить коректне значення"
+                                            data-error="Введіть коректне значення"
                                             data-required-error="Поле не заповнене"
                                     >
                                     <div class="error-message"></div>
@@ -1104,8 +1106,8 @@
     <section class="contacts">
         <div class="container py-5">
             <h2 class="text-center mb-3 section__title">Контакти</h2>
-            <div class="row row-cols-1 row-cols-sm-3">
-                <div class="col mb-3">
+            <div class="row contacts__row">
+                <div class="col-xs-12 col-lg-6 mb-3">
                     <div class="contact__item d-flex align-items-center mb-3">
                         <div class="contact__item-icon me-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -1125,8 +1127,7 @@
                         <a href="mailto:endurancehub.ua@gmail.com" class="contact__item-link">endurancehub.ua@gmail.com</a>
                     </div>
                 </div>
-                <div class="col mb-3"></div>
-                <div class="col mb-3">
+                <div class="col-xs-12 col-lg-6 mb-3">
                     <div class="contact__item d-flex align-items-center mb-3">
                         <div class="contact__item-icon me-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -1340,6 +1341,6 @@
 <script type="text/javascript" src="7c2fabf4084871da30bd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script src="03b08659050b263af172.js"></script>
+<script src="ec9a8f289094a15f30ac.js"></script>
 <script defer src="bundle.js"></script></body>
 </html>

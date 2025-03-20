@@ -318,6 +318,10 @@ a {
     max-height: 500px;
   }
 
+  @media (min-width: 1366px) {
+    max-height: 600px;
+  }
+
   &:before {
     content: '';
     position: absolute;

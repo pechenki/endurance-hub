@@ -130,14 +130,52 @@ $(document).ready(function(){
         ]
     });
 
-    $('.js-validate').on('submit', function (e) {
-        console.log('SUBMIT')
+    $(document).on('submit', '.js-validate', function (e) {
         e.preventDefault();
-        if (validate($(this))) {
-            $(this).find('button[type="submit"]').attr('disabled', 'disabled');
-            $(this)[0].submit();
+
+        const $form = $(this);
+
+        if (validate($form)) {
+            $form.find('button[type="submit"]').attr('disabled', 'disabled');
+
+            const jsonData = $form.serializeArray().reduce((acc, { name, value }) => {
+                acc[name] = value;
+                return acc;
+            }, {});
+
+            $.ajax({
+                url: 'https://nethunt.com/service/automation/hooks/6803619fb92b38e3345d3d06',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(jsonData),
+                success: function () {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Форму відправлено',
+                        text: 'Дякуємо!',
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(() => {
+                        $form.find('button[type="submit"]').removeAttr('disabled');
+                        $form[0].reset(); // reset modal form
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('detailsModal'));
+                        modal.hide();
+                    });
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Упс...',
+                        text: 'Щось пішло не так. Спробуйте ще раз',
+                    });
+                    $form.find('button[type="submit"]').removeAttr('disabled');
+                }
+            });
         }
+
+        return false;
     });
+
 
     $('#lviv-link').on('click', function (e) {
         e.preventDefault();
@@ -154,6 +192,9 @@ $(document).ready(function(){
         }, 'fast');
         $('#kyiv-tab').trigger('click'); // Open the Kyiv tab
     });
+
+
+
 });
 
 /*-------------------------------validate------------------------------*/

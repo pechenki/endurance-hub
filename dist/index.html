@@ -1047,11 +1047,12 @@
                                 <div class="mb-1">
                                     <label for="name" class="form-label">Ім'я</label>
                                     <input
-                                            type="text"
-                                            class="form-control"
-                                            id="name"
-                                            required
-                                            data-required-error="Поле не заповнене"
+                                        type="text"
+                                        class="form-control"
+                                        name="name"
+                                        id="name"
+                                        required
+                                        data-required-error="Поле не заповнене"
                                     >
                                     <div class="error-message"></div>
                                 </div>
@@ -1061,13 +1062,14 @@
                                 <div class="mb-1">
                                     <label for="phone" class="form-label">Телефон</label>
                                     <input
-                                            type="tel"
-                                            class="form-control"
-                                            id="phone"
-                                            required
-                                            data-validate="phone"
-                                            data-error="Введіть коректне значення"
-                                            data-required-error="Поле не заповнене"
+                                        type="tel"
+                                        class="form-control"
+                                        name="phone"
+                                        id="phone"
+                                        required
+                                        data-validate="phone"
+                                        data-error="Введіть коректне значення"
+                                        data-required-error="Поле не заповнене"
                                     >
                                     <div class="error-message"></div>
                                 </div>
@@ -1076,21 +1078,26 @@
 
                         <div class="mb-3">
                             <label for="cooperation" class="form-label">Хочу співпрацювати як</label>
-                            <select class="form-select js-select" id="cooperation" required
-                                    data-required-error="Поле не заповнене">
-                                <option value="0">тренер (-ка)</option>
-                                <option value="1">блогер (-ка)</option>
-                                <option value="2">власник (-ця) спортивного клубу</option>
-                                <option value="3">виробник (-ця) товарів для спорту</option>
-                                <option value="4">організатор (-ка) змагань</option>
-                                <option value="5">магазин спорттоварів</option>
-                                <option value="6">інше</option>
+                            <select
+                                class="form-select js-select"
+                                name="cooperation"
+                                id="cooperation"
+                                required
+                                data-required-error="Поле не заповнене"
+                            >
+                                <option value="coach">тренер (-ка)</option>
+                                <option value="blogger">блогер (-ка)</option>
+                                <option value="sports_club_owner">власник (-ця) спортивного клубу</option>
+                                <option value="sporting_goods_manufacturer">виробник (-ця) товарів для спорту</option>
+                                <option value="sports_competition_organizer">організатор (-ка) змагань</option>
+                                <option value="sporting_goods_store">магазин спорттоварів</option>
+                                <option value="other">інше</option>
                             </select>
                         </div>
                         <!-- Message Textarea -->
                         <div class="mb-3">
                             <label for="message" class="form-label">Коментар</label>
-                            <textarea class="form-control" id="message" rows="4"></textarea>
+                            <textarea class="form-control" id="message" rows="4" name="message"></textarea>
                         </div>
 
                         <!-- Submit Button -->
@@ -1198,18 +1205,19 @@
             <form class="js-validate" data-toggle="validator" novalidate="true">
                 <!-- Modal Body -->
                 <div class="modal-body">
-                    <p>Please fill out the form below to get in touch with us:</p>
+                    <p>Будь ласка, заповніть форму нижче, щоб зв'язатися з нами:</p>
 
                     <!-- Name Field -->
                     <div>
                         <label for="contact-name" class="form-label">Ім'я</label>
                         <input
-                                type="text"
-                                class="form-control"
-                                id="contact-name"
-                                placeholder="Введіть своє ім'я"
-                                required
-                                data-required-error="Поле не заповнене"
+                            type="text"
+                            class="form-control"
+                            name="contact-name"
+                            id="contact-name"
+                            placeholder="Введіть своє ім'я"
+                            required
+                            data-required-error="Поле не заповнене"
                         >
                         <div class="error-message"></div>
                     </div>
@@ -1217,21 +1225,27 @@
                     <div>
                         <label for="contact-phone" class="form-label">Телефон</label>
                         <input
-                                type="tel"
-                                class="form-control"
-                                id="contact-phone"
-                                placeholder="Введіть свій телефон"
-                                required
-                                data-error="Введіть коректне значення"
-                                data-required-error="Поле не заповнене"
+                            type="tel"
+                            class="form-control"
+                            name="contact-phone"
+                            id="contact-phone"
+                            placeholder="Введіть свій телефон"
+                            required
+                            data-error="Введіть коректне значення"
+                            data-required-error="Поле не заповнене"
                         >
                         <div class="error-message"></div>
                     </div>
                     <!-- Message Field -->
                     <div>
                         <label for="contact-message" class="form-label">Повідомлення</label>
-                        <textarea class="form-control" id="contact-message" rows="3"
-                                  placeholder="Введіть повідомлення"></textarea>
+                        <textarea
+                            class="form-control"
+                            name="contact-message"
+                            id="contact-message"
+                            rows="3"
+                            placeholder="Введіть повідомлення"
+                        ></textarea>
                     </div>
 
                 </div>
@@ -1340,6 +1354,7 @@
 <script type="text/javascript" src="7c2fabf4084871da30bd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script src="f9654a2890ab0215a3e3.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="ce9b7b196174ffa09ebe.js"></script>
 <script defer src="bundle.js"></script></body>
 </html>

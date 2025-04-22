@@ -47,6 +47,7 @@ a {
   font-size: 18px;
   &:hover, &:focus {
     color: $light;
+    background-color: $blue;
   }
 
   &-primary {

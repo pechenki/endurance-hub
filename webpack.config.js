@@ -59,18 +59,6 @@ module.exports = {
                     from: path.resolve(__dirname, 'src/fonts'),
                     to: path.resolve(__dirname, 'dist/fonts'),
                 },
-                {
-                    from: path.resolve(__dirname, "src/js/jquery-3.7.1.min.js"),
-                    to: path.resolve(__dirname, "dist/js/jquery.min.js"),
-                },
-                {
-                    from: path.resolve(__dirname, "src/js/bootstrap.bundle.min.js"),
-                    to: path.resolve(__dirname, "dist/js/bootstrap.bundle.min.js"),
-                },
-                {
-                    from: path.resolve(__dirname, "src/js/slick.min.js"),
-                    to: path.resolve(__dirname, "dist/js/slick.min.js"),
-                },
             ],
         }),
         new HtmlWebpackPlugin({
@@ -81,9 +69,6 @@ module.exports = {
         }),
         !isDevelopment && new MiniCssExtractPlugin({ filename: "styles.css" }),
     ].filter(Boolean),
-    externals: {
-        jquery: "jQuery", // Exclude jQuery from bundling
-    },
     devServer: {
         static: {
             directory: path.join(__dirname, "dist"),
